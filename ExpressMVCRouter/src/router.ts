@@ -7,7 +7,6 @@ import { IRequestHandler } from "./requestHandlers/iRequestHandler";
 export function Router(): RequestHandler {
     function processRequest(req: Request, res: Response, next: NextFunction): any {
         let routeResolvers: IRouteResolver[] = [new DefaultResolver()];
-
         let handler: IRequestHandler = null as any;
         for (const resolver of routeResolvers) {
             handler = resolver.resolve(req, res);
@@ -18,8 +17,7 @@ export function Router(): RequestHandler {
             throw new Error("No handler found");
         }
 
-        handler().then(result => res.send(result));
-        return;
+        return handler().then(result => res.send(result));
     }
 
     return processRequest;

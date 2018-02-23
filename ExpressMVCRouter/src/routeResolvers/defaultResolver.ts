@@ -11,6 +11,6 @@ export class DefaultResolver implements IRouteResolver {
         // retrieve this function and return it
 
         // stub for handler
-        return async () => new Promise<any>((resolve, reject) => {});
+        return async () => new Promise<any>((resolve, reject) => resolve("some text"));
     }
 }
