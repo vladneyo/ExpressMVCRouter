@@ -1,3 +1,3 @@
 export interface IRequestHandler {
-    (): any;
+    (): Promise<any>;
 }
