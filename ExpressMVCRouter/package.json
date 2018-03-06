@@ -9,6 +9,12 @@
   "author": "@vladneyo",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.11.1"
+    "@types/express": "^4.11.1",
+    "@types/lodash": "^4.14.104",
+    "get-parameter-names": "^0.3.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.6"
   }
 }
